@@ -28,12 +28,12 @@ db = SQLAlchemy(app)
 
 Then we create a Class That will define how we store the data:
 
-class Users(db.Model):
-    id = db.Column('user_id', db.Integer, primary_key = True)
-    username = db.Column(db.String(100))
-    identifier = db.Column(db.Integer)
-    firstName = db.Column(db.String(50))
-    lastName = db.Column(db.String(50))
+    class Users(db.Model):
+        id = db.Column('user_id', db.Integer, primary_key = True)
+        username = db.Column(db.String(100))
+        identifier = db.Column(db.Integer)
+        firstName = db.Column(db.String(50))
+        lastName = db.Column(db.String(50))
 
     def __init__(self, username, identifier, firstName, lastName):
         self.username = username
