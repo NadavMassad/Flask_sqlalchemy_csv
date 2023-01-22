@@ -35,11 +35,11 @@ Then we create a Class That will define how we store the data:
         firstName = db.Column(db.String(50))
         lastName = db.Column(db.String(50))
 
-    def __init__(self, username, identifier, firstName, lastName):
-        self.username = username
-        self.identifier = identifier
-        self.firstName = firstName
-        self.lastName = lastName
+        def __init__(self, username, identifier, firstName, lastName):
+            self.username = username
+            self.identifier = identifier
+            self.firstName = firstName
+            self.lastName = lastName
 
 
 We have two actions in this app: save the file, and display the data.
